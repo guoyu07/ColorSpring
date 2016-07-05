@@ -22,13 +22,14 @@
     * {
         box-sizing: border-box;
         font-family: "Source Sans Pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-        font-weight: 200;
+        font-weight: 300;
     }
 
 
     body {
         margin: 0;
         background: #444;
+        font-size: 14px;
     }
 
     .flex-container {
