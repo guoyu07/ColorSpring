@@ -14,10 +14,12 @@
 
 ::-webkit-scrollbar-thumb {
     background: #1eaedb;
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-track {
     background: black;
+    border-radius: 10px;
 }
 
 // For Internet Explorer

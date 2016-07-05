@@ -89,6 +89,7 @@
     .sidebar-nav a:hover {
         // background: black;
         color: #ddd;
+        border-radius: 5px;
     }
 
     .sidebar-nav img {
