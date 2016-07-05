@@ -58,7 +58,15 @@
         max-width: 20%;
     }
     main > * {
-        min-height: 120px;
+        min-height: 140px;
+    }
+
+    @media screen and (max-width: 768px) {
+        main > * {
+            flex-basis: 50%;
+            max-width:  50%;
+            font-size: 12px;
+        }
     }
 
     main.rows > * {

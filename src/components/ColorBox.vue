@@ -2,10 +2,12 @@
 <template>
     <div class="colorbox animated zoomIn" v-for="item in colors | filterBy colorFilter in 'colorgroup' " v-bind:style="{ background: item.colorname }">
         <div class="color-info">
-            {{ item.colorname | uppercase }}<hr>
-            {{ item.colorhex | uppercase }}<br>
-            {{ item.colorrgb | uppercase }}<br>
-            {{ item.colorgroup | uppercase }}
+            <ul>
+                <li class="colorname">{{ item.colorname | uppercase }}</li>
+                <li class="colorgroup">{{ item.colorgroup | uppercase }}</li>
+                <li class="colorhex">{{ item.colorhex | uppercase }}</li>
+                <li class="colorrgb">{{ item.colorrgb | uppercase }}</li>
+            </ul>
         </div>
     </div>
 </template>
@@ -188,24 +190,50 @@
     .colorbox {
         display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: center;
+        // align-items: center;
+        // justify-content: center;
     }
 
     .color-info {
-        text-align: center;
-        width: 80%;
+        width: 100%;
+        margin: 15px;
+
         padding: 20px;
         opacity: 0;
         color: white;
-        text-shadow: 0px -1px dimgray;
         background: rgba(0, 0, 0, 0.5);
-        cursor: help;
-        //cursor: crosshair;
-    }
+        cursor: crosshair;
+        word-wrap: break-word;
 
-    .color-info:hover {
-        opacity: 1;
-        animation: fadeIn 0.3s;
+        &:hover {
+            opacity: 1;
+            animation: fadeIn 0.3s;
+        }
+
+        ul {
+
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .colorname {
+            font-weight: 600;
+            border-bottom: 1px solid white;
+            padding-bottom: 5px;
+        }
+
+        .colorgroup {
+            padding-top: 5px;
+        }
+
+        .colorhex {
+
+        }
+        .colorrgb {}
+
+
+
+
     }
 </style>
