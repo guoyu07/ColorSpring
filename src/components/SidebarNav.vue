@@ -6,7 +6,7 @@
     </ul>
 
     <ul class="sidebar-nav">
-        <li><a href="" title="Sort colors alphabetically" class="multicolor rounded" @click.prevent="updatecolorfilter()"></a></li>
+        <li><a href="" title="Show All Colors" class="multicolor rounded" @click.prevent="updatecolorfilter()"></a></li>
 
         <li v-for="item in links">
             <a href="" class="rounded" title="Show {{ item.colorgrouplinktitle }}" @click.prevent="updatecolorfilter(item.colorgrouplinktitle )" v-bind:style="{ background: item.linkbgcolor }"></a>
@@ -14,7 +14,8 @@
     </ul>
 
     <ul class="sidebar-nav">
-        <li><a href="" title="Search Color Names">&#128270;</a></li>
+        <li><a href="" title="Search Color Names">Search</a></li>
+        <li><a href="" title="About ColorSpring">Info</a></li>
     </ul>
 </template>
 
@@ -67,6 +68,7 @@
         list-style: none;
         margin: 0;
         padding: 0;
+        margin-top: 20px;
     }
 
     .sidebar-nav li {
@@ -87,7 +89,6 @@
     }
 
     .sidebar-nav a:hover {
-        // background: black;
         color: #ddd;
         border-radius: 5px;
     }

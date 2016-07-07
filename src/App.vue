@@ -12,7 +12,7 @@
     export default {
         components: {
             Sidebar,
-            ColorContainer,
+            ColorContainer
         }
     }
 </script>
@@ -28,7 +28,7 @@
 
     body {
         margin: 0;
-        background: #444;
+        background: #444444;
         font-size: 14px;
     }
 

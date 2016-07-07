@@ -35,12 +35,8 @@
         width: $sidebar-width;
         position: fixed;
 
-        background: #2B3239;
+        background: $sidebar-bg;
         color: #efefef;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
         overflow: auto;
     }
 
