@@ -1,4 +1,4 @@
-# ColorSpring
+![ColorSpring Logo](/src/assets/colorspring_logo.png?raw=true "ColorSpring")
 
 > A tool for choosing colours, based on the complete list of native CSS Color Names
 
