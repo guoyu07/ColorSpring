@@ -26,7 +26,7 @@
 <!-- CSS -->
 <style lang="scss">
 
-    @import './src/scss/main.scss';
+    @import './src/scss/variables.scss';
 
     aside {
         height: 100vh;
