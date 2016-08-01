@@ -7,7 +7,7 @@ Vue.use(Vuex)
 const state = {
     colorFilter: '',
     toggleGrid: 0,
-    testString: "Boodle"
+    toggleModal: 0
 }
 
 
@@ -19,6 +19,10 @@ const mutations = {
 
     TOGGLEGRID (state, toggleGridValue) {
         state.toggleGrid = !state.toggleGrid
+    },
+
+    TOGGLEMODAL (state, toggleModalValue) {
+        state.toggleModal = !state.toggleModal
     }
 
 }

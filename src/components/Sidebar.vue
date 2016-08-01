@@ -1,7 +1,6 @@
 <!-- Template -->
 <template>
     <aside class="sidebar">
-        <!--<div class="logo">ColorSpring</div>-->
         <sidebar-nav></sidebar-nav>
     </aside>
 </template>
@@ -34,16 +33,11 @@
         order: 1;
         width: $sidebar-width;
         position: fixed;
+        left: 0;
 
         background: $sidebar-bg;
         color: #efefef;
         overflow: auto;
     }
 
-    .logo {
-        background: black;
-        font-size: 12px;
-        text-align: center;
-        padding: 20px 0;
-    }
 </style>

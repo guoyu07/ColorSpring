@@ -6,3 +6,7 @@ export const updatecolorfilter = ({ dispatch }, colorgroup) => {
 export const togglegrid = ({ dispatch }, togglegridvalue) => {
     dispatch('TOGGLEGRID', togglegridvalue)
 }
+
+export const togglemodal = ({ dispatch }, togglemodalvalue) => {
+    dispatch('TOGGLEMODAL', togglemodalvalue)
+}

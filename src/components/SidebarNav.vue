@@ -1,26 +1,30 @@
 <!-- Template -->
 <template>
     <ul class="sidebar-nav">
-        <li v-if="tg"><a href="" title="Display as Grid" @click.prevent="togglegrid()"><img src="../assets/gridicon.svg"></a></li>
-        <li v-else><a href="" title="Display as List" @click.prevent="togglegrid()"><img src="../assets/listicon.svg"></a></li>
+        <li class="sidebar-nav-logo" @click.prevent="updatecolorfilter()"><a href="" title="Show All Colors" class="sidebarnav-image" ><img src="../assets/cs_logo.svg" title="Show All Colors"></a></li>
     </ul>
 
     <ul class="sidebar-nav">
-        <li><a href="" title="Show All Colors" class="multicolor rounded" @click.prevent="updatecolorfilter()"></a></li>
-
         <li v-for="item in links">
             <a href="" class="rounded" title="Show {{ item.colorgrouplinktitle }}" @click.prevent="updatecolorfilter(item.colorgrouplinktitle )" v-bind:style="{ background: item.linkbgcolor }"></a>
         </li>
     </ul>
 
     <ul class="sidebar-nav">
+        <li v-if="tg"><a href="" title="Display as Grid" @click.prevent="togglegrid()" class="sidebarnav-image"><img src="../assets/gridicon.svg"></a></li>
+        <li v-else><a href="" title="Display as List" @click.prevent="togglegrid()" class="sidebarnav-image"><img src="../assets/listicon.svg"></a></li>
+    </ul>
+
+    <ul class="sidebar-nav">
         <li><a href="" title="Search Color Names">Search</a></li>
-        <li><a href="" title="About ColorSpring">Info</a></li>
+        <li><a href="" title="About ColorSpring" @click.stop="toggleModal()">Info</a></li>
     </ul>
 </template>
 
 <!-- JS-->
 <script>
+
+    import Modal from '../components/Modal'
 
     import * as actions from '../actions'
 
@@ -33,6 +37,8 @@
                 colorFilter: state => state.colorFilter,
                 toggleGrid: state => state.togglegridvalue,
                 tg: state => state.toggleGrid,
+
+                toggleModal: state => state.toggleModal,
             },
             actions: actions
         },
@@ -68,7 +74,15 @@
         list-style: none;
         margin: 0;
         padding: 0;
-        margin-top: 20px;
+        // margin-top: 20px;
+    }
+
+    .sidebar-nav-logo {
+        list-style: none;
+        margin: 0;
+        padding: 20px 0;
+        background: black;
+
     }
 
     .sidebar-nav li {
@@ -93,20 +107,8 @@
         border-radius: 5px;
     }
 
-    .sidebar-nav img {
-        max-width: 50%;
-    }
-
-    .multicolor {
-        background: linear-gradient(to right,
-            red 10%, hotpink 10%,
-            hotpink 20%, tomato 20%,
-            tomato 30%, gold 30%,
-            gold 40%, darkorchid 40%,
-            darkorchid 50%, seagreen 50%,
-            seagreen 60%, dodgerblue 60%,
-            dodgerblue 70%, sienna 70%,
-            sienna 80%, white 80%,
-            white 90%, silver 90% );
+    .sidebarnav-image img {
+        max-width: 36px;
+        max-height: 36px;
     }
 </style>

@@ -1,16 +1,19 @@
 <template>
     <div id="app" class="flex-container">
+        <!--<modal></modal>-->
         <sidebar></sidebar>
         <color-container></color-container>
     </div>
 </template>
 
 <script>
+    import Modal from './components/Modal'
     import Sidebar from './components/Sidebar'
     import ColorContainer from './components/ColorContainer'
 
     export default {
         components: {
+            Modal,
             Sidebar,
             ColorContainer
         }
