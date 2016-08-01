@@ -6,10 +6,11 @@
 
     <ul class="sidebar-nav">
         <li v-for="item in links">
-            <a href="" class="rounded" title="Show {{ item.colorgrouplinktitle }}" @click.prevent="updatecolorfilter(item.colorgrouplinktitle )" v-bind:style="{ background: item.linkbgcolor }"></a>
+            <a href="" class="rounded" title="Show {{ item.colorgrouplinktitle }}" @click.prevent="updatecolorfilter(item.colorgrouplinktitle )" v-bind:style="{ background: item.linkbgcolor }">{{ item.colorgrouplinktitle }}</a>
         </li>
     </ul>
 
+    <!--
     <ul class="sidebar-nav">
         <li v-if="tg"><a href="" title="Display as Grid" @click.prevent="togglegrid()" class="sidebarnav-image"><img src="../assets/gridicon.svg"></a></li>
         <li v-else><a href="" title="Display as List" @click.prevent="togglegrid()" class="sidebarnav-image"><img src="../assets/listicon.svg"></a></li>
@@ -19,6 +20,7 @@
         <li><a href="" title="Search Color Names">Search</a></li>
         <li><a href="" title="About ColorSpring" @click.stop="toggleModal()">Info</a></li>
     </ul>
+    -->
 </template>
 
 <!-- JS-->
@@ -74,7 +76,6 @@
         list-style: none;
         margin: 0;
         padding: 0;
-        // margin-top: 20px;
     }
 
     .sidebar-nav-logo {
@@ -93,18 +94,17 @@
         display: block;
 
         text-decoration: none;
-        padding: 10px 0;
-        color: white;
+        color: transparent;
         text-align: center;
         font-size: 12px;
-        height: 36px;
-        width: 36px;
+        height: 30px;
+        width: 30px;
         margin: 0 auto;
     }
 
     .sidebar-nav a:hover {
-        color: #ddd;
-        border-radius: 5px;
+        color: transparent;
+        border-radius: 10px;
     }
 
     .sidebarnav-image img {
