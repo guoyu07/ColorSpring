@@ -8,10 +8,19 @@
     >
       <div class="color-info">
         <ul>
-          <li class="colorname">{{ item.colorname }}</li>
+
+          <li :key="item.id" :id="item.colorname" class="colorname">
+            {{ item.colorname }}<button class="copybtn" :data-clipboard-text="item.colorname" title="Copy Colorname To Clipboard">&#128203;</button>
+          </li>
+
           <li class="colorgroup">{{ item.colorgroup }}</li>
-          <li class="colorhex">{{ item.colorhex }}</li>
-          <li class="colorrgb">{{ item.colorrgb }}</li>
+          <li :key="item.id" :id="item.colorhex" class="colorhex">
+            {{ item.colorhex }}<button class="copybtn" :data-clipboard-text="item.colorhex" title="Copy Hex To Clipboard">&#128203;</button>
+          </li>
+          <li :key="item.id" :id="item.colorrgb" class="colorrgb">
+            {{ item.colorrgb }}<button class="copybtn" :data-clipboard-text="item.colorrgb" title="Copy RGB To Clipboard">&#128203;</button>
+          </li>
+
         </ul>
       </div>
     </li>
@@ -22,6 +31,10 @@
 <script>
 
   import store from 'src/store/store.js'
+
+  var clipboard = require('clipboard');
+  new clipboard('.copybtn');
+
 
   export default {
 
@@ -70,6 +83,23 @@
     @include transitionAll;
   }
 
+  .copybtn {
+    float: right;
+    cursor: pointer;
+
+    color: #fff;
+    background-color: transparent;
+
+    display: inline-block;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    border: 0;
+    padding: 0 10px;
+    white-space: nowrap;
+    box-sizing: border-box;
+  }
+
   @media screen and (max-width: 768px) {
         .color-list-item {
             width:  50%;
@@ -112,9 +142,11 @@
     }
 
     .colorhex {
-      text-transform: uppercase
+      text-transform: uppercase;
     }
-    .colorrgb {}
+    .colorrgb {
+      text-transform: uppercase;
+    }
 
   }
 
