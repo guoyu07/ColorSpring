@@ -1,0 +1,10 @@
+
+// Rounded:
+@mixin rounded {
+  border-radius: 9999px;
+}
+
+// Rounded:
+@mixin transitionAll {
+  transition: all 0.5s ease;
+}
