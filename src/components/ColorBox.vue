@@ -10,15 +10,15 @@
         <ul>
 
           <li :key="item.id" :id="item.colorname" class="colorname">
-            {{ item.colorname }}<button class="copybtn" :data-clipboard-text="item.colorname" title="Copy Colorname To Clipboard">&#128203;</button>
+            {{ item.colorname }}<button class="copybtn" :data-clipboard-text="item.colorname" title="Copy Colorname To Clipboard"><img class="clip-icon" src="../assets/clipboard.svg"></button>
           </li>
 
           <li class="colorgroup">{{ item.colorgroup }}</li>
           <li :key="item.id" :id="item.colorhex" class="colorhex">
-            {{ item.colorhex }}<button class="copybtn" :data-clipboard-text="item.colorhex" title="Copy Hex To Clipboard">&#128203;</button>
+            {{ item.colorhex }}<button class="copybtn" :data-clipboard-text="item.colorhex" title="Copy Hex To Clipboard"><img class="clip-icon" src="../assets/clipboard.svg"></button>
           </li>
           <li :key="item.id" :id="item.colorrgb" class="colorrgb">
-            {{ item.colorrgb }}<button class="copybtn" :data-clipboard-text="item.colorrgb" title="Copy RGB To Clipboard">&#128203;</button>
+            {{ item.colorrgb }}<button class="copybtn" :data-clipboard-text="item.colorrgb" title="Copy RGB To Clipboard"><img class="clip-icon" src="../assets/clipboard.svg"></button>
           </li>
 
         </ul>
@@ -98,6 +98,12 @@
     padding: 0 10px;
     white-space: nowrap;
     box-sizing: border-box;
+  }
+
+  .clip-icon {
+    width: 50%;
+    height: 50%;
+    vertical-align: middle;
   }
 
   @media screen and (max-width: 768px) {
