@@ -30,7 +30,7 @@
 
 <script>
 
-  import store from 'src/store/store.js'
+  import store from '../store/store.js'
 
   var clipboard = require('clipboard');
   new clipboard('.copybtn');

@@ -8,7 +8,7 @@
 <!-- JS-->
 <script>
 
-  import store from 'src/store/store.js'
+  import store from '../store/store.js'
   import Colorbox from '../components/Colorbox.vue'
 
   export default {

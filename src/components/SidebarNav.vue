@@ -31,7 +31,7 @@
 <script>
 
   import Modal from '../components/Modal'  
-  import store from 'src/store/store.js'
+  import store from '../store/store.js'
 
   export default {
 
