@@ -1,7 +1,7 @@
 {
   "name": "colorspring",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "Named CSS Color Tool",
   "author": "Mike Seaby <mike@pixelspring.co.uk>",
   "private": true,
   "scripts": {
